@@ -1,0 +1,45 @@
+@import '../../styles/styles.scss';
+
+.login-main-container{
+    @include flex-coloumn-center;
+    height: 100%;
+    width: 100%;
+    background: url('../../assets/images/star-wars-background.jpg') no-repeat;
+    background-size: cover;
+
+    header {
+      color: white;
+      font-size: 75px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    form {
+      @include flex-coloumn-center;
+  
+      input, button[type="submit"] {
+        height: 40px;
+        width: 300px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid $dark-red;
+        border-radius: 5px;
+      }
+  
+      button[type="submit"] {
+        border: none;
+        cursor: pointer;
+        background: $dark-red;
+        color: white;
+        font-weight: bolder;
+      }
+  
+      button[type="submit"]:hover:not(:disabled){
+        background: $red;
+        color: white;
+      }
+    }
+}

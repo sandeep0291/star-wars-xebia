@@ -1,0 +1,48 @@
+@import '../../../styles/styles.scss';
+
+.planet-search-container {
+    @include flex-coloumn-center;
+    width: 100%;
+    padding: 10px;
+    top: 8%;
+    position: relative;
+
+    input {
+        font-size: 16px;
+        color: $dark-red;
+        height: 40px;
+        width: 50%;
+        text-align: center;
+        border-radius: 5px; 
+        box-shadow: 2px 3px grey;
+    }
+
+    .planet-list {
+        width: 50%;
+        background: white;
+        height: auto;
+        box-shadow: 5px 5px $red;
+        border-radius: 5px;
+        
+        ul{
+            padding: 2px 5px;
+            margin: 0;
+            li {
+                list-style: none;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 5px 0;
+                height: 20px;
+                line-height: 20px;
+                border-bottom: 1px dotted $dark-red;
+            }
+            .search-limit, .no-records {
+                color: $red;
+                @include shake-animation;
+            }
+        }
+    }
+}
+
